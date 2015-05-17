@@ -1,0 +1,14 @@
+println ("Please type in any number");
+String MyString = System.console().readLine();
+int MyFirstNumber = Integer.parseInt(MyString);
+println ("Please type in another number");
+MyString = System.console().readLine();
+int MySecondNumber = Integer.parseInt(MyString);
+int MyResult = MySecondNumber*MyFirstNumber;
+println ("Product of two inputted numbers is: " + MyResult);
+int MySecondResult = 0;
+while (MySecondNumber!=0) {
+MySecondResult = MySecondResult + MyFirstNumber;
+MySecondNumber--;
+}
+println ("Product of two inputted numbers is: " + MySecondResult);

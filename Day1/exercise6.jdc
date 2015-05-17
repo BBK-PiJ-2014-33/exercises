@@ -1,0 +1,17 @@
+println ("Please type in any number");
+String MyString = System.console().readLine();
+int MyFirstNumber = Integer.parseInt(MyString);
+println ("Please type in another number");
+MyString = System.console().readLine();
+int MySecondNumber = Integer.parseInt(MyString);
+int MyMainResult = 0;
+int MyRemainder = 0;
+int MyTestNumber = MyFirstNumber;
+
+while (MyTestNumber > 0) {
+MyMainResult = MyMainResult + 1;
+MyTestNumber = MyTestNumber - MySecondNumber;
+}
+MyMainResult = MyMainResult - 1;
+MyRemainder = MyFirstNumber - MySecondNumber*MyMainResult;
+println (MyFirstNumber + " divided by " + MySecondNumber + " is " + MyMainResult + " , remainder is " + MyRemainder);

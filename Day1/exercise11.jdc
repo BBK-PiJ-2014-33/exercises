@@ -1,0 +1,18 @@
+println ("Please enter five separate cards");
+
+String[] MyRankArray;
+String[] MySuitArray;
+MyRankArray = new String[6];
+MySuitArray = new String[6];
+
+for (int count = 1; count <6; count = count +1)
+	{ 
+		println ("Please key in rank of card number " + count);
+		MyRankArray[count] = System.console().readLine();
+		//read as string , check if it J, Q, K, if not check if it is in the range of 1 to 10 
+		println ("Please key in suit of card number " + count);
+		//check that suit is valid 
+		MySuitArray[count] = System.console().readLine();
+	}
+
+// represent suit as numbers, 1,2,3,4 for each suit, so by thinking of good representation we make solution simpler		

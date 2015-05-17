@@ -1,0 +1,22 @@
+
+println ("Please enter as many POSITIVE numbers as you like. To finish enter -1");
+
+String str;
+int MyNewNumber=0;
+int MyMaxNumber=0;
+
+str = System.console().readLine();
+MyNewNumber =Integer.parseInt(str);
+
+while (MyNewNumber!=-1)
+ 	{
+ 		if( MyNewNumber > MyMaxNumber)
+             		{
+             			MyMaxNumber = MyNewNumber;
+          		}
+ 		str = System.console().readLine();
+ 		MyNewNumber =Integer.parseInt(str);
+ 	}
+ println ("Highest number was: " + MyMaxNumber);
+
+
