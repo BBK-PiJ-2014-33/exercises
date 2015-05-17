@@ -1,0 +1,53 @@
+ 
+ String str;
+ double myAmountBorrowed = 0.0;
+ int myTerm = 0;
+ double myRate = 0.0;
+ double myTotalAmount = 0.0;
+ double myYearlyPayment = 0.0;
+     
+ println ("Please enter total amount borrowed for your mortgage");
+ str = System.console().readLine();
+ myAmountBorrowed = Double.parseDouble(str);
+     
+ println ("Please enter number of years to pay your mortgage back");
+ str = System.console().readLine();
+ myTerm = Integer.parseInt(str);
+     
+     
+ println ("Please enter interest rate");
+ str = System.console().readLine();
+ myRate = Double.parseDouble(str);
+  
+ myTotalAmount = calculateTotalAmount(myAmountBorrowed, myRate);
+ myYearlyPayment = calculateYearlyPayment(myTotalAmount, myTerm);
+    
+ println ("The total amount to be paid is: " + myTotalAmount );
+ println ("The money to be paid every year is: " + myYearlyPayment );
+ println ("The number of years before the interest is paid and only the initial capital remains: " +  calculateYearsUntilCapital (myAmountBorrowed, myTotalAmount, myYearlyPayment) );
+ 
+ 
+ 
+ double calculateTotalAmount( double cost, double rate)
+ 		{             
+                  	double myTotalCost=0.0;
+                 	myTotalCost = cost * (1 + (rate/100));
+                  	return myTotalCost;
+ 		}
+   
+ double calculateYearlyPayment (double totalAmount, int years)
+                  {
+                                  double myYearlyAmount = 0.0;
+                                  myYearlyAmount = totalAmount / years;
+                                  return myYearlyAmount;
+                  }
+   
+ double calculateYearsUntilCapital (double cost, double totalAmount, double YearlyPayment)
+                  {
+                                  double myYearsUntilCapital = 0.0;
+                                  myYearsUntilCapital = (totalAmount - cost)/YearlyPayment;
+                                  return myYearsUntilCapital;
+                  }
+                                 
+ 
+ 

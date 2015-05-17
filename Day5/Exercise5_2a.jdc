@@ -1,0 +1,38 @@
+
+int MyAnswer = 0;
+
+MyAnswer = factorialRecursive(3);
+
+println("Answer using factorialRecursive is :" + MyAnswer);
+
+MyAnswer = factorialIterative(3);
+
+println("Answer using factorialIterative is :" + MyAnswer);
+
+int factorialRecursive(int n) 
+	{
+ 		if (n == 1) 
+ 			{
+ 				return 1;
+ 			} 
+ 		else {
+ 			int result = n * factorialRecursive(n-1);
+ 			return result;
+ 			}
+ 	}
+ 	
+int factorialIterative(int n)
+	{
+		int MyResult = n;
+		n--;
+		while (n!=1)
+			{
+				MyResult = MyResult * n;
+				//println("Current result :" + MyResult);
+				n--;
+			}
+		return MyResult;
+	}
+				
+				
+				
